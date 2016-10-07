@@ -153,22 +153,6 @@ int main()
 		
 				
 	}
-	FILE *fp;
-	fp = fopen("hexmem.txt", "w+");
-	fprintf(fp, "MEMORY USE AT TERMINATION\n\n");
-	for(i = 0; i<12; i++)
-	{
-		fprintf(fp, "circles[%i]:\t%p\n", i, &circles[i]);
-	}
-	fprintf(fp, "curCircle:\t%p\n", &curCircle);
-	fprintf(fp, "ALLEGRO 5 COMPONENTS:\ndisplay:\t%p\n", &display);
-	fprintf(fp, "eventQueue:\t%p\n", &eventQueue);
-	fprintf(fp, "timer:\t%p\n", &timer);
-	fprintf(fp, "font24:\t%p\n", &font24);
-	fprintf(fp, "CONSTANTS:\nw:\t%p\n", &w);
-	fprintf(fp, "h:\t%p\n", &h);
-	fprintf(fp, "fps:\t%p\n", &fps);
-	fclose(fp);
 
 	al_destroy_display(display);
 	al_destroy_timer(timer);
